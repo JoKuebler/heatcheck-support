@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heatcheck - Support & Help</title>
+    <meta name="description" content="Support and help for Heatcheck App - Find exciting NBA games worth watching">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: #2a2a2a;
+            background: #f8f9fa;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1D428A 0%, #0d1f47 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(29, 66, 138, 0.3);
+        }
+        
+        .header h1 {
+            font-size: 3em;
+            font-weight: 800;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+        }
+        
+        .header .tagline {
+            font-size: 1.3em;
+            font-weight: 400;
+            opacity: 0.95;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+        }
+        
+        .section-title {
+            font-size: 2em;
+            font-weight: 700;
+            color: #1D428A;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #C8102E;
+            display: inline-block;
+        }
+        
+        h3 {
+            color: #1D428A;
+            font-size: 1.4em;
+            font-weight: 700;
+            margin: 25px 0 12px;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .contact-item {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #C8102E;
+            transition: all 0.3s;
+        }
+        
+        .contact-item:hover {
+            border-left-width: 8px;
+            transform: translateX(4px);
+        }
+        
+        .contact-item strong {
+            color: #1D428A;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        
+        .faq-item {
+            background: linear-gradient(to right, #f8f9fa 0%, white 100%);
+            border-left: 4px solid #1D428A;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        
+        .faq-item:hover {
+            border-left-color: #C8102E;
+            box-shadow: 0 2px 8px rgba(200, 16, 46, 0.15);
+        }
+        
+        .faq-question {
+            color: #1D428A;
+            font-weight: 700;
+            font-size: 1.2em;
+            margin-bottom: 12px;
+        }
+        
+        .faq-answer {
+            color: #4a4a4a;
+            line-height: 1.7;
+        }
+        
+        .button {
+            display: inline-block;
+            background: linear-gradient(135deg, #C8102E 0%, #a00d25 100%);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1em;
+            margin: 10px 10px 10px 0;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(200, 16, 46, 0.3);
+        }
+        
+        .button:hover {
+            background: linear-gradient(135deg, #a00d25 0%, #7a0a1c 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(200, 16, 46, 0.4);
+        }
+        
+        .button-secondary {
+            background: linear-gradient(135deg, #1D428A 0%, #0d1f47 100%);
+            box-shadow: 0 4px 12px rgba(29, 66, 138, 0.3);
+        }
+        
+        .button-secondary:hover {
+            background: linear-gradient(135deg, #0d1f47 0%, #050f22 100%);
+            box-shadow: 0 6px 20px rgba(29, 66, 138, 0.4);
+        }
+        
+        a {
+            color: #C8102E;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        
+        a:hover {
+            color: #1D428A;
+        }
+        
+        ul {
+            margin: 20px 0;
+            padding-left: 25px;
+        }
+        
+        li {
+            margin: 10px 0;
+            color: #4a4a4a;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 40px 20px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        }
+        
+        .footer p {
+            color: #666;
+            margin: 8px 0;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, rgba(200, 16, 46, 0.1) 0%, rgba(29, 66, 138, 0.1) 100%);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #C8102E;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 700;
+            margin-left: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .header .tagline {
+                font-size: 1.1em;
+            }
+            
+            .section {
+                padding: 25px;
+            }
+            
+            .section-title {
+                font-size: 1.6em;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🏀 Heatcheck</h1>
+        <p class="tagline">Find exciting NBA games worth watching</p>
+    </div>
+    
+    <div class="container">
+        <div class="section">
+            <h2 class="section-title">Contact Support</h2>
+            <p>Need help? Have questions? We're here for you!</p>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <strong>📧 Email</strong>
+                    <a href="mailto:support@heatcheck.com">support@heatcheck.com</a>
+                    <p style="margin-top: 8px; font-size: 0.9em; color: #666;">Response within 24 hours</p>
+                </div>
+                
+                <div class="contact-item">
+                    <strong>🐦 Twitter</strong>
+                    <a href="https://twitter.com/heatcheck" target="_blank">@Heatcheck</a>
+                    <p style="margin-top: 8px; font-size: 0.9em; color: #666;">DMs open for quick questions</p>
+                </div>
+                
+                <div class="contact-item">
+                    <strong>⏰ Response Time</strong>
+                    Usually within 24 hours
+                    <p style="margin-top: 8px; font-size: 0.9em; color: #666;">Faster during EU hours</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">How are excitement scores calculated?</div>
+                <div class="faq-answer">
+                    We analyze every game using <span class="highlight">20+ factors</span> including final margin, lead changes, clutch plays, overtime, game flow, pace, and scoring patterns. Each factor is weighted based on its impact on game excitement, then combined into a 0-10 score. Higher scores mean more exciting games!
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">When is data updated?</div>
+                <div class="faq-answer">
+                    Data is updated <span class="highlight">every morning around 6 AM CET</span> with analysis of yesterday's games. During heavy game nights, updates may take slightly longer as we process all the data.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What do the labels mean?</div>
+                <div class="faq-answer">
+                    <strong>Down to the Wire:</strong> Game decided in final seconds<br>
+                    <strong>Scoring Explosion:</strong> High-scoring offensive showcase<br>
+                    <strong>Pickpocket Alert:</strong> Defensive battle with lots of steals<br>
+                    <strong>Chaos Ball:</strong> Wild, unpredictable back-and-forth<br>
+                    <strong>Easy Win:</strong> One-sided game, not worth your time<br>
+                    <strong>Blowout Alert:</strong> 30+ point margin
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Is this app affiliated with the NBA?</div>
+                <div class="faq-answer">
+                    No, Heatcheck is an <span class="highlight">independent app created by a fan</span>. We use publicly available data from NBA.com and link to official NBA highlight videos. We're not endorsed by or affiliated with the NBA.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Why is the app free?</div>
+                <div class="faq-answer">
+                    Built by a solo developer as a passion project to solve my own problem as a new dad and European NBA fan. There's an optional <span class="highlight">"Buy me a Gatorade"</span> support option, but the core app is and will remain free.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What's coming next? <span class="badge">ROADMAP</span></div>
+                <div class="faq-answer">
+                    <strong>Coming soon:</strong> Push notifications for exciting games, team filters, historical data, player-based labels, advanced analytics, and more! Follow us on Twitter for updates.
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Report a Bug</h2>
+            <p>Found an issue? Help us improve by reporting it!</p>
+            <p style="margin: 20px 0;">Please include:</p>
+            <ul>
+                <li>What happened (be specific)</li>
+                <li>What you expected to happen</li>
+                <li>Your device model and iOS version</li>
+                <li>Screenshots if possible</li>
+            </ul>
+            <a href="mailto:support@heatcheck.com?subject=Bug%20Report&body=Device:%20%0AiOS%20Version:%20%0A%0AWhat%20happened:%0A%0AWhat%20I%20expected:%0A" class="button">📝 Report Bug</a>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Feature Requests</h2>
+            <p>Have an idea that would make Heatcheck even better? We'd love to hear it!</p>
+            <p style="margin: 20px 0;">We're especially interested in:</p>
+            <ul>
+                <li>New game labels you'd find useful</li>
+                <li>Additional data you'd like to see</li>
+                <li>UI/UX improvements</li>
+                <li>Integration ideas</li>
+            </ul>
+            <a href="mailto:support@heatcheck?subject=Feature%20Request" class="button button-secondary">💡 Suggest Feature</a>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">About Heatcheck</h2>
+            <p>Heatcheck was created by a European NBA fan who became a dad and suddenly had limited time to follow basketball. Instead of wasting precious morning minutes trying to figure out which games were worth watching, I built an app to solve the problem.</p>
+            <p style="margin-top: 15px;">What started as a simple script evolved into a full passion project. Now it helps fans around the world (especially in Europe) find the most exciting games without spoilers.</p>
+            <p style="margin-top: 15px;"><strong>Solo developer. Real problem. Simple solution.</strong></p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Legal</h2>
+            <p><a href="privacy.html">📋 Privacy Policy</a> - How we handle your data</p>
+            <p style="margin-top: 12px;"><a href="terms.html">📄 Terms of Service</a> - Terms of use</p>
+        </div>
+
+        <div class="footer">
+            <p style="font-size: 1.2em; font-weight: 700; color: #1D428A; margin-bottom: 15px;">Made with ❤️ for NBA fans</p>
+            <p>Not affiliated with the NBA</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">© 2025 Heatcheck. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
