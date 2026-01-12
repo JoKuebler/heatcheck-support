@@ -1,2 +1,2 @@
-# heatcheck-support
-Support and Documentation for Heatcheck App
+# heatcheckr-support
+Support and Documentation for HeatCheckr App
